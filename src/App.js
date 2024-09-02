@@ -1,12 +1,11 @@
-import React, { Profiler } from "react";
 import "./App.css";
-import ReactFrag from "./components/Fragment/reactFrag";
-import GetProps from "./components/Hooks/Usecontext/Ex3/Passprops";
-import NoRender from "./components/Hooks/UseMemo/memoEx";
-import ConditionalRender from "./components/ConditionalRender/conditionlRender";
-import { Provider } from "react-redux";
-import { store } from "./components/Redux/store/store";
-import CounterComponent from "./components/Redux/testredux";
+
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Routing/pages/home";
+import About from "./components/Routing/pages/about";
+import Contact from "./components/Routing/pages/contact";
+import NoPage from "./components/Routing/pages/notfound";
+import RouteLinks from "./components/Routing/routes/route";
 
 function App() {
   // const user = {
@@ -78,13 +77,17 @@ function App() {
       {/* <GetProps /> */}
       {/* <ReactFrag /> */}
 
-      <Profiler id="profile" onRender={onRender}>
+      {/* <Profiler id="profile" onRender={onRender}>
         <ConditionalRender />
-      </Profiler>
-
+      </Profiler> */}
+{/* 
       <Provider store={store}>
 <CounterComponent />
-      </Provider>
+      </Provider> */}
+     
+    <RouteLinks />
+
+
     </div>
   );
 }
